@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins',sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            background:#000;
+            color:#fff;
+        }
+        .header{
+            width: 100%;
+            height: 100vh;
+            background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/header-image.png);
+            background-size: cover;
+            background-position: center;
+            padding: 0;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:  10px 0;
+        }
+        .logo{
+            width: 150px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        nav button{
+            border: 0;
+            outline: 0;
+            background: #db0001;
+            color:#fff;
+            padding: 7px 20px;
+            font-size: 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .language-btn{
+            display: inline;
+            align-items: center;
+            background: transparent;
+            border: 1px solid #fff;
+            padding: 7px 10px;
+        }
+        .language-btn img{
+            width: 10px;
+            margin-left: 10px;
+        }
+    .header-content{
+        display:block;
+        align-items: center;
+        text-align: center;
+        margin-top: 17%;
+        max-width: 650px;
+        margin-left: 30%;
+    }
+     .header-content h1{
+        font-size: 60px;
+        line-height: 70px;
+        font-weight: 600;    
+     }
+    .header-content h3{
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    .email-signup{
+        background: #ffff;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        overflow: hidden;
+    }
+     .email-signup input{
+        flex: 1;
+        border: 0;
+        outline: none;
+        margin-left: 20px;
+     }
+      .email-signup button{
+        background-color: #db0001;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 15px 30px;
+      }
+       
+      .features{
+        padding: 50px 12%;
+        font-size: 22px; 
+      }
+      .row{
+        display: flex;
+        align-items: center;
+        padding: 50px 0;
+      }
+      .tv-img{
+        width:400px;
+      }
+      /*--------faq----------*/
+
+      .faq{
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+        margin-left: 400px;
+
+      }
+      .faq h2{
+        font-weight: 500;
+        font-size: 40px;
+
+      }
+      .accordion{
+        margin: 60px;
+        width: 100%;
+        max-width: 750px;
+      }
+      .accordion li{
+        list-style: none;
+        width: 100%;
+        padding: 5px;
+      }
+      .accordion li label{
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        font-size: 18px;
+        font-family: 500;
+        background: #303030;
+        cursor: pointer;
+        position: relative;
+      }
+      label::after{
+        content:  '+';
+        font-size: 34px;
+        position: absolute;
+        right:20px;
+        overflow: hidden;
+      } 
+
+      .accordion .content{
+        background: #303030;
+        text-align: left;
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s,padding 0.5s;
+      }
+      input[type="radio"]{
+        display: none;
+      }
+      .accordion input[type="radio"]:checked + label + .content{
+        max-height: 600px;
+        padding:30px 20px;
+      }
+      h2{
+        margin-right: 200px;
+      }
+    </style>
+
+ 
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <div>
+            <button class="language-btn">English <img src="images/down-icon.png"></button>
+            <button>Sign In</button>
+            </div>
+        </nav>
+        <div class="header-content">
+            <h1>Unlimited movies,TV shows and more.</h1>
+            <h3>Watch anywhere.Cancel anytime</h3>
+            <p>Ready to watch? Enter your email to create or respect your membership.</p>
+            <form class="email-signup">
+                <input type="email" placeholder="Email address" required>
+                <button type="submit">Get started</button>
+            </form>
+        </div>
+    </div>
+    <div class="features">
+         <div class="row">
+            <div class="text col">
+                <h1>Enjoy on your TV.</h1>
+                <p>Watch on smart TVs, playstation,Xbox, Chromecast,Apple TV, blu-ray players and more.</p>
+            </div>
+             <div class="img-col">
+                <img class="tv-img"src="images/feature-1.png">
+            </div>
+         </div>
+
+         <div class="row">
+
+            <div class="img-col">
+                <img class="tv-img"src="images/feature-2.png">
+            </div>
+            <div class="text col">
+                <h2>Download your shows to watch offline</h2>
+                <p>save your favourite easily and always have something to watch</p>
+            </div>
+         </div>
+          <div class="row">
+            <div class="text col">
+                <h2>Watch everywhere.</h2>
+                <p>Stream unlimited movies and TV shows on your phone,Tablet,laptop and TV.</p>
+            </div>
+            <div class="img-col">
+                <img class="tv-img"src="images/feature-3.png">
+            </div>
+         </div>
+
+          <div class="row">
+            <div class="img-col">
+                <img class="tv-img"src="images/feature-4.png">
+            </div>
+             <div class="text col">
+                <h2>Create Profile for children.</h2>
+                <p>Send children on adventure with thier favorite charecters in a space mode just for them-free with your membership.</p>
+            </div>
+         </div>
+    </div>
+    <div class="faq">
+        <h2>Frequently Asked Question</h2>
+        <ul class="accordion">
+            <li>
+                <input type="radio" name="accordion"id="first">
+                <label for="first">How much does Netflix cost?</label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, doloribus.
+                         Perferendis dolores nisi eum, in reprehenderit dolor voluptas aspernatur corrupti.
+                          Est alias veritatis reiciendis, quasi architecto magni minima doloremque ducimus?
+                          </p>
+                </div>
+            </li>
+
+            <li>
+                <input type="radio" name="accordion"id="second">
+                <label for="second">What is neflix?</label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, doloribus.
+                         Perferendis dolores nisi eum, in reprehenderit dolor voluptas aspernatur corrupti.
+                          Est alias veritatis reiciendis, quasi architecto magni minima doloremque ducimus?
+                          </p>
+                </div>
+            </li>
+
+            <li>
+                <input type="radio" name="accordion"id="third">
+                <label for="third">Where can i watch it?</label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, doloribus.
+                         Perferendis dolores nisi eum, in reprehenderit dolor voluptas aspernatur corrupti.
+                          Est alias veritatis reiciendis, quasi architecto magni minima doloremque ducimus?
+                          </p>
+                </div>
+            </li>
+
+            <li>
+                <input type="radio" name="accordion"id="fourth">
+                <label for="fourth">How do i cancle?</label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, doloribus.
+                         Perferendis dolores nisi eum, in reprehenderit dolor voluptas aspernatur corrupti.
+                          Est alias veritatis reiciendis, quasi architecto magni minima doloremque ducimus?
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <input type="radio" name="accordion"id="fifth">
+                <label for="fifth">What can i watch on netflix?</label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, doloribus.
+                         Perferendis dolores nisi eum, in reprehenderit dolor voluptas aspernatur corrupti.
+                          Est alias veritatis reiciendis, quasi architecto magni minima doloremque ducimus?
+                    </p>
+                </div>
+            </li>
+
+             <li>
+                <input type="radio" name="accordion"id="sixth">
+                <label for="sixth">What can i watch on netflix?</label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, doloribus.
+                         Perferendis dolores nisi eum, in reprehenderit dolor voluptas aspernatur corrupti.
+                          Est alias veritatis reiciendis, quasi architecto magni minima doloremque ducimus?
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+      
+</body>
+</html>
